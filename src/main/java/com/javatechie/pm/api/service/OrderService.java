@@ -1,5 +1,7 @@
 package com.javatechie.pm.api.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +11,8 @@ import com.javatechie.pm.api.util.NotificationUtil;
 
 @Service
 public class OrderService {
+
+    private static final Logger log = LoggerFactory.getLogger(OrderService.class);
 
     private final NotificationUtil notificationUtil;
 
@@ -25,7 +29,7 @@ public class OrderService {
 	}
 
 	private int addDiscount(OrderRequest order) {
-		System.out.println("called...");
+		log.info("called...");
 		int price = order.getPrice();
 		int discountAMount = 0;
 		if (order.isDiscountable()) {
