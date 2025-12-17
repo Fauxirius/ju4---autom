@@ -1,0 +1,20 @@
+{
+  "issues": [
+    {
+      "engineId": "SonarJava",
+      "ruleId": "S106",
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
+      "primaryLocation": {
+        "message": "Replace this use of 'System.out' with a logger.",
+        "filePath": "src/main/java/com/javatechie/pm/api/service/OrderService.java",
+        "textRange": {
+          "startLine": 23,
+          "endLine": 23
+        }
+      },
+      "effort": "5min",
+      "tags": ["bad-practice"]
+    }
+  ]
+}
