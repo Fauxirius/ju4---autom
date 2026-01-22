@@ -21,6 +21,7 @@ public class OrderService {
     }
 
 	public OrderResponse checkoutOrder(OrderRequest order) {
+		log.info("Processing checkout for order: {}", order.getId());
 		// call DAO
 		int discount=addDiscount(order);
 		order.setPrice(order.getPrice()-discount);
